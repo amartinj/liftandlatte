@@ -18,20 +18,44 @@
             width: 100vw;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            font-size: 1rem;
+            color: #1B2845;
+        }
+        nav a {
+            text-decoration: none;
+            color: #A63D40;
+            margin: 0 10px;
         }
         h1 {
             font-weight: normal;
             text-align: center;
-            white-space: nowrap; /* Evita el salto de línea */
-            width: 70vw; /* Ocupa el 70% del ancho de la pantalla */
-            font-size: 10vw; /* Ajusta dinámicamente el tamaño del texto */
-            line-height: 1; /* Asegura un alineado preciso */
+            white-space: nowrap;
+            width: 70vw;
+            font-size: 10vw;
+            line-height: 1;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: #1B2845;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="#">carta</a> | <a href="#">dónde estamos?</a>
+    </nav>
     <h1>lift & latte</h1>
+    <footer>
+        © 2025 Lift & Latte. Todos los derechos reservados.
+    </footer>
 </body>
 </html>
