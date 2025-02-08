@@ -70,7 +70,7 @@ h1 {
 h2 {
     font-weight: normal;
     white-space: nowrap;
-    font-size: 8vw; /* Tamaño relativo a la vista */
+    font-size: 5vw; /* Tamaño relativo a la vista */
     line-height: 1;
 }
 
