@@ -9,49 +9,51 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            overflow: hidden;
         }
         html, body {
             background-color: #F0F0F0;
             color: #410909;
             font-family: "American Typewriter", serif;
-            width: 100vw;
-            height: 100vh;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Elimina el scroll */
+        }
+        body {
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Distribuye el espacio entre los elementos */
-            align-items: center;
+            justify-content: space-between; /* Asegura que el footer se quede abajo */
+            height: 100%; /* Ocupa toda la altura de la ventana */
         }
         nav {
+            text-align: center;
             font-size: 1rem;
             color: #1B2845;
             margin-top: 20px;
         }
         nav a {
             text-decoration: none;
-            color: #1B2845;
+            color: #A63D40;
             margin: 0 10px;
         }
         .content {
-            flex-grow: 1; /* Permite que el contenido crezca, pero sin empujar el footer fuera */
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-grow: 1; /* Permite que el contenido ocupe todo el espacio restante */
             width: 100%;
+            text-align: center;
         }
         h1 {
             font-weight: normal;
-            text-align: center;
             white-space: nowrap;
-            width: 70vw;
-            font-size: 10vw;
+            font-size: 10vw; /* Tamaño relativo a la vista */
             line-height: 1;
         }
         footer {
             font-size: 0.8rem;
             text-align: center;
             color: #1B2845;
-            margin-bottom: 20px;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -63,10 +65,8 @@
         <h1>lift & latte</h1>
     </div>
     <footer>
-        <div>© 2025 Lomar Vital, S.L. Todos los derechos reservados.
-        </div>
-        <div>Disfruta de tu café, que aquí no usamos cookies 🍪.
-        </div>
+        <div>© 2025 lomar vital, s.l. todos los derechos reservados.</div>
+        <div>disfruta a gusto de tu café, que aquí no usamos cookies 🍪.</div>
     </footer>
 </body>
 </html>
