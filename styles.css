@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Conv_american_typewriter';
+    src: url('american_typewriter.eot');
+    src: url('american_typewriter.eot') format('eot'), 
+         url('american_typewriter.woff') format('woff'), 
+         url('american_typewriter.ttf') format('truetype'), 
+         url('american_typewriter.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #F0F0F0;
+    color: #410909;
+    font-family: "Conv_american_typewriter", serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Elimina el scroll */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el footer se quede abajo */
+    height: 100%; /* Ocupa toda la altura de la ventana */
+}
+
+nav {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #1B2845;
+    margin-top: 20px;
+}
+
+nav svg {
+    fill: #A63D40;
+    margin-bottom: -0.3rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #A63D40;
+    margin: 0 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Permite que el contenido ocupe todo el espacio restante */
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    white-space: nowrap;
+    font-size: 15vw; /* Tamaño relativo a la vista */
+    line-height: 1;
+}
+
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #1B2845;
+    margin-bottom: 20px;
+}
