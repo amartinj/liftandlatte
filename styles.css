@@ -79,6 +79,7 @@ h2 {
     white-space: nowrap;
     font-size: 5vw; /* Tamaño relativo a la vista */
     line-height: 1;
+    display: block;
 
 footer {
     font-size: 0.8rem;
