@@ -74,6 +74,12 @@ h2 {
     line-height: 1;
 }
 
+.content a {
+    font-weight: normal;
+    white-space: nowrap;
+    font-size: 5vw; /* Tamaño relativo a la vista */
+    line-height: 1;
+
 footer {
     font-size: 0.8rem;
     text-align: center;
