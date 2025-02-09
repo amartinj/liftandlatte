@@ -129,9 +129,13 @@ footer {
         width: 1.1rem;
         height: 1.1rem;
     }
+
+    nav a {
+        margin: 0 7px;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 370px) {
     nav {
         font-size: 0.8rem;
     }
@@ -139,9 +143,13 @@ footer {
     footer {
         font-size: 0.5rem;
     }
+
+    nav a {
+        margin: 0 5px;
+    }
 }
 
-@media (max-width: 346px) {
+@media (max-width: 295px) {
     nav {
         font-size: 0.6rem;
     }
@@ -155,9 +163,13 @@ footer {
         width: 0.7rem;
         height: 0.8rem;
     }
+
+    nav a {
+        margin: 0 5px;
+    }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 235px) {
     nav {
         font-size: 0.4rem;
     }
@@ -170,5 +182,9 @@ footer {
         margin-bottom: -0.1rem;
         width: 0.5rem;
         height: 0.5rem;
+    }
+
+    nav a {
+        margin: 0.4px;
     }
 }
