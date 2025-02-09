@@ -24,6 +24,17 @@ html, body {
     overflow: hidden; /* Elimina el scroll */
 }
 
+html.with-scroll, body.with-scroll {
+    background-color: #F0F0F0;
+    color: #410909;
+    font-family: "Conv_american_typewriter", serif;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    display: block;
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -31,11 +42,16 @@ body {
     height: 100%; /* Ocupa toda la altura de la ventana */
 }
 
+p {
+    text-align: left;
+    margin: 25px;
+}
+
 nav {
     text-align: center;
     font-size: 1.2rem;
     color: #1B2845;
-    margin-top: 20px;
+    margin: 20px 20px;
 }
 
 nav svg {
@@ -60,6 +76,12 @@ nav a {
     text-align: center;
 }
 
+.content iframe {
+    width: 95%;
+    height: 100%;
+    border: none;
+}
+
 h1 {
     font-weight: normal;
     white-space: nowrap;
@@ -78,5 +100,5 @@ footer {
     font-size: 0.8rem;
     text-align: center;
     color: #1B2845;
-    margin-bottom: 20px;
+    margin: 20px 20px;
 }
