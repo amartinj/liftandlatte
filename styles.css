@@ -45,6 +45,17 @@ body {
 p {
     text-align: left;
     margin: 25px;
+    font-size: 1rem;
+}
+
+span.stamp {
+    font-size: 3rem;
+    background-color: #D9D9D9;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: block;
+    text-align: center;
+    border-radius: 0.5rem;
 }
 
 nav {
