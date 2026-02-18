@@ -120,7 +120,7 @@ footer {
     margin: 20px 20px;
 }
 
-@media (max-width: 515px) {
+@media (max-width: 575px) {
     nav {
         font-size: 1rem;
 
@@ -141,7 +141,7 @@ footer {
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 463px) {
     nav {
         font-size: 0.8rem;
     }
@@ -155,7 +155,7 @@ footer {
     }
 }
 
-@media (max-width: 333px) {
+@media (max-width: 375px) {
     nav {
         font-size: 0.6rem;
     }
@@ -175,7 +175,7 @@ footer {
     }
 }
 
-@media (max-width: 263px) {
+@media (max-width: 295px) {
     nav {
         font-size: 0.4rem;
     }
