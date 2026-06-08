@@ -194,3 +194,54 @@ footer {
         margin: 0.4px;
     }
 }
+/* Estilos específicos para la sección de Bingo Lift Latte */
+.bingo-lift-latte {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  font-family: inherit;
+  line-height: 1.8;
+}
+
+.bingo-lift-latte h1,
+.bingo-lift-latte h2,
+.bingo-lift-latte h3 {
+  text-transform: lowercase;
+  font-weight: 600;
+}
+
+.bingo-lift-latte h1 {
+  margin-bottom: 24px;
+}
+
+.bingo-lift-latte h2 {
+  margin-top: 50px;
+  margin-bottom: 24px;
+}
+
+.bingo-lift-latte h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.bingo-lift-latte ul {
+  padding-left: 20px;
+}
+
+.bingo-lift-latte li {
+  margin-bottom: 12px;
+}
+
+.bingo-lift-latte hr {
+  margin: 50px 0;
+  opacity: .15;
+}
+
+.bingo-lift-latte .intro {
+  font-size: 1.1rem;
+}
+
+.bingo-lift-latte .final {
+  margin-top: 50px;
+  font-weight: 600;
+}
