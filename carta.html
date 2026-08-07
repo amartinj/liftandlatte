@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carta | lift & latte</title>
+<style>
+  @font-face {
+    font-family: 'AmericanTypewriter';
+    src: local('American Typewriter'), local('AmericanTypewriter');
+  }
+
+  :root{
+    --principal:#410909;
+    --fondo:#F0F0F0;
+    --destacado:#A63D40;
+    --secundario:#732030;
+    --neutro2:#D9D9D9;
+    --contraste1:#1B2845;
+    --contraste2:#7FB3D5;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--fondo);
+    font-family:'AmericanTypewriter','American Typewriter','Courier New', serif;
+    color:var(--principal);
+  }
+
+  header{
+    background:var(--principal);
+    color:var(--fondo);
+    text-align:center;
+    padding:40px 20px 30px;
+    border-bottom:6px solid var(--destacado);
+  }
+
+  header h1{
+    margin:0;
+    font-size:3.4rem;
+    letter-spacing:2px;
+
+  }
+
+  header p{
+    margin:8px 0 0;
+    color:var(--neutro2);
+    font-size:0.95rem;
+    letter-spacing:1px;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    background:var(--neutro2);
+    padding:14px 10px;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+
+  nav a{
+    color:var(--secundario);
+    text-decoration:none;
+    font-size:0.85rem;
+    padding:6px 12px;
+    border:1px solid var(--secundario);
+    border-radius:20px;
+    transition:0.2s;
+    white-space:nowrap;
+  }
+
+  nav a:hover{
+    background:var(--secundario);
+    color:var(--fondo);
+  }
+
+  main{
+    max-width:720px;
+    margin:0 auto;
+    padding:30px 20px 60px;
+  }
+
+  section.categoria{
+    margin-bottom:44px;
+    scroll-margin-top:70px;
+  }
+
+  .categoria h2{
+    color:var(--destacado);
+    font-size:1.5rem;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    border-bottom:2px solid var(--destacado);
+    padding-bottom:8px;
+    margin-bottom:18px;
+  }
+
+  .item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px dotted var(--neutro2);
+  }
+
+  .item:last-child{
+    border-bottom:none;
+  }
+
+  .item-nombre{
+    color:var(--contraste1);
+    font-size:1.02rem;
+  }
+
+  .item-precio{
+    color:var(--secundario);
+    font-weight:bold;
+    font-size:1.02rem;
+    white-space:nowrap;
+  }
+
+  footer{
+    text-align:center;
+    padding:26px 16px;
+    background:var(--principal);
+    color:var(--neutro2);
+    font-size:0.8rem;
+    letter-spacing:1px;
+  }
+
+  footer span{
+    color:var(--contraste2);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>lift &amp; latte</h1>
+  <p>carta</p>
+</header>
+
+<nav>
+  <a href="#cafe">Café</a>
+  <a href="#bebidas">Otras bebidas</a>
+  <a href="#smoothies">Smoothies</a>
+  <a href="#salados">Salados</a>
+  <a href="#caprichos">Caprichos</a>
+  <a href="#bowls">Bowls</a>
+  <a href="#cerveza">Cerveza</a>
+  <a href="#fruta">Fruta</a>
+</nav>
+
+<main>
+
+  <section class="categoria" id="cafe">
+    <h2>Café</h2>
+    <div class="item"><span class="item-nombre">Americano</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Espresso doble</span><span class="item-precio">1,90 €</span></div>
+    <div class="item"><span class="item-nombre">Cortado</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Aeroccano</span><span class="item-precio">2,30 €</span></div>
+    <div class="item"><span class="item-nombre">Latte</span><span class="item-precio">2,50 €</span></div>
+    <div class="item"><span class="item-nombre">Flat white</span><span class="item-precio">2,90 €</span></div>
+    <div class="item"><span class="item-nombre">Capuccino</span><span class="item-precio">2,90 €</span></div>
+    <div class="item"><span class="item-nombre">Affogato</span><span class="item-precio">2,90 €</span></div>
+    <div class="item"><span class="item-nombre">Batch brew</span><span class="item-precio">3,30 €</span></div>
+    <div class="item"><span class="item-nombre">Espresso Tonic</span><span class="item-precio">3,90 €</span></div>
+    <div class="item"><span class="item-nombre">Cold brew</span><span class="item-precio">4,00 €</span></div>
+    <div class="item"><span class="item-nombre">Manual brew</span><span class="item-precio">6,00 €</span></div>
+  </section>
+
+  <section class="categoria" id="bebidas">
+    <h2>Otras bebidas</h2>
+    <div class="item"><span class="item-nombre">Vaso de leche</span><span class="item-precio">1,80 €</span></div>
+    <div class="item"><span class="item-nombre">Agua mineral 1.5L</span><span class="item-precio">1,50 €</span></div>
+    <div class="item"><span class="item-nombre">Coca cola zero</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Colacao/Nesquik</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Tónica</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Té o infusión</span><span class="item-precio">2,60 €</span></div>
+    <div class="item"><span class="item-nombre">Agua con gas Vichy</span><span class="item-precio">2,50 €</span></div>
+    <div class="item"><span class="item-nombre">Tinto de Verano</span><span class="item-precio">2,50 €</span></div>
+    <div class="item"><span class="item-nombre">Chai tea latte</span><span class="item-precio">3,50 €</span></div>
+    <div class="item"><span class="item-nombre">Matcha latte</span><span class="item-precio">3,50 €</span></div>
+    <div class="item"><span class="item-nombre">Zumo de naranja</span><span class="item-precio">3,50 €</span></div>
+  </section>
+
+  <section class="categoria" id="smoothies">
+    <h2>Smoothies</h2>
+    <div class="item"><span class="item-nombre">Colombian flaker</span><span class="item-precio">4,80 €</span></div>
+    <div class="item"><span class="item-nombre">Pichuli detox</span><span class="item-precio">4,80 €</span></div>
+    <div class="item"><span class="item-nombre">President digestive</span><span class="item-precio">4,80 €</span></div>
+    <div class="item"><span class="item-nombre">Spicy blanc</span><span class="item-precio">4,80 €</span></div>
+    <div class="item"><span class="item-nombre">Vitamin dragon</span><span class="item-precio">4,80 €</span></div>
+    <div class="item"><span class="item-nombre">Vititoro Power</span><span class="item-precio">4,80 €</span></div>
+  </section>
+
+  <section class="categoria" id="salados">
+    <h2>Salados</h2>
+    <div class="item"><span class="item-nombre">Pincho tortilla</span><span class="item-precio">5,00 €</span></div>
+    <div class="item"><span class="item-nombre">Tostada de Mantequilla y mermelada</span><span class="item-precio">1,90 €</span></div>
+    <div class="item"><span class="item-nombre">Tostada de tomate y AOVE</span><span class="item-precio">2,20 €</span></div>
+    <div class="item"><span class="item-nombre">Tostada Guacamole y pavo</span><span class="item-precio">5,00 €</span></div>
+    <div class="item"><span class="item-nombre">Tostada Hummus con semillas de chía y huevo cocido</span><span class="item-precio">5,00 €</span></div>
+    <div class="item"><span class="item-nombre">Tostada de Tomate, AOVE, jamón ibérico</span><span class="item-precio">5,50 €</span></div>
+    <div class="item"><span class="item-nombre">Crema 100% cacahuete y fruta</span><span class="item-precio">4,50 €</span></div>
+    <div class="item"><span class="item-nombre">Crema de queso, miel y nueces</span><span class="item-precio">4,50 €</span></div>
+    <div class="item"><span class="item-nombre">Sándwich Mozarella y Tomate</span><span class="item-precio">6,90 €</span></div>
+    <div class="item"><span class="item-nombre">Sándwich Pollo y Mostaza</span><span class="item-precio">6,90 €</span></div>
+    <div class="item"><span class="item-nombre">Desayuno early birds</span><span class="item-precio">7,50 €</span></div>
+  </section>
+
+  <section class="categoria" id="caprichos">
+    <h2>Caprichos</h2>
+    <div class="item"><span class="item-nombre">Brownie</span><span class="item-precio">4,50 €</span></div>
+    <div class="item"><span class="item-nombre">Cookies de obrador</span><span class="item-precio">3,50 €</span></div>
+    <div class="item"><span class="item-nombre">Carrot bread</span><span class="item-precio">3,95 €</span></div>
+    <div class="item"><span class="item-nombre">Cheescake</span><span class="item-precio">4,50 €</span></div>
+  </section>
+
+  <section class="categoria" id="bowls">
+    <h2>Bowls</h2>
+    <div class="item"><span class="item-nombre">Overnight oats con topping de 2 frutas</span><span class="item-precio">6,00 €</span></div>
+    <div class="item"><span class="item-nombre">Yogur con topping de granola y 2 frutas</span><span class="item-precio">6,50 €</span></div>
+    <div class="item"><span class="item-nombre">Açaí bowl</span><span class="item-precio">9,50 €</span></div>
+  </section>
+
+  <section class="categoria" id="cerveza">
+    <h2>Cerveza</h2>
+    <div class="item"><span class="item-nombre">Mahou clásica</span><span class="item-precio">1,80 €</span></div>
+    <div class="item"><span class="item-nombre">Mahou especial</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Mahou 0,0 Tostada</span><span class="item-precio">2,30 €</span></div>
+  </section>
+
+  <section class="categoria" id="fruta">
+    <h2>Fruta</h2>
+    <div class="item"><span class="item-nombre">Pieza de fruta</span><span class="item-precio">2,00 €</span></div>
+  </section>
+
+</main>
+
+<footer>
+  lift &amp; latte <span>·</span> Precios en euros, IVA incluido
+</footer>
+
+</body>
+</html>
