@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carta | lift & latte</title>
+<title>carta | lift & latte</title>
 <style>
   @font-face {
     font-family: 'AmericanTypewriter';
@@ -40,7 +40,6 @@
     margin:0;
     font-size:3.4rem;
     letter-spacing:2px;
-
   }
 
   header p{
@@ -112,9 +111,23 @@
     border-bottom:none;
   }
 
+  .item-info{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+  }
+
   .item-nombre{
     color:var(--contraste1);
     font-size:1.02rem;
+  }
+
+  .item-desc{
+    color:var(--secundario);
+    font-size:0.82rem;
+    font-style:italic;
+    line-height:1.3;
+    max-width:480px;
   }
 
   .item-precio{
@@ -152,7 +165,6 @@
   <a href="#salados">Salados</a>
   <a href="#caprichos">Caprichos</a>
   <a href="#bowls">Bowls</a>
-  <a href="#cerveza">Cerveza</a>
   <a href="#fruta">Fruta</a>
 </nav>
 
@@ -160,18 +172,18 @@
 
   <section class="categoria" id="cafe">
     <h2>Café</h2>
-    <div class="item"><span class="item-nombre">Americano</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Americano</span><span class="item-desc">doble espresso, agua</span></div><span class="item-precio">2,00 €</span></div>
     <div class="item"><span class="item-nombre">Espresso doble</span><span class="item-precio">1,90 €</span></div>
     <div class="item"><span class="item-nombre">Cortado</span><span class="item-precio">2,00 €</span></div>
-    <div class="item"><span class="item-nombre">Aeroccano</span><span class="item-precio">2,30 €</span></div>
-    <div class="item"><span class="item-nombre">Latte</span><span class="item-precio">2,50 €</span></div>
-    <div class="item"><span class="item-nombre">Flat white</span><span class="item-precio">2,90 €</span></div>
-    <div class="item"><span class="item-nombre">Capuccino</span><span class="item-precio">2,90 €</span></div>
-    <div class="item"><span class="item-nombre">Affogato</span><span class="item-precio">2,90 €</span></div>
-    <div class="item"><span class="item-nombre">Batch brew</span><span class="item-precio">3,30 €</span></div>
-    <div class="item"><span class="item-nombre">Espresso Tonic</span><span class="item-precio">3,90 €</span></div>
-    <div class="item"><span class="item-nombre">Cold brew</span><span class="item-precio">4,00 €</span></div>
-    <div class="item"><span class="item-nombre">Manual brew</span><span class="item-precio">6,00 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Aeroccano</span><span class="item-desc">doble espresso, agua fría texturizada</span></div><span class="item-precio">2,30 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">latte</span><span class="item-desc">espresso, leche</span></div><span class="item-precio">2,50 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Flat white</span><span class="item-desc">doble espresso, leche</span></div><span class="item-precio">2,90 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Capuccino</span><span class="item-desc">doble espresso, leche, espuma</span></div><span class="item-precio">2,90 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Affogato</span><span class="item-desc">doble espresso, helado de vainilla</span></div><span class="item-precio">2,90 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Batch brew</span><span class="item-desc">filtrado en lote</span></div><span class="item-precio">3,30 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Espresso Tonic</span><span class="item-desc">doble espresso, tónica y un toque de naranja</span></div><span class="item-precio">3,90 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Cold brew</span><span class="item-desc">extracción lenta en frío</span></div><span class="item-precio">4,00 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Manual brew</span><span class="item-desc">filtrado al momento. Pregunta por nuestros cafés de temporada</span></div><span class="item-precio">6,00 €</span></div>
   </section>
 
   <section class="categoria" id="bebidas">
@@ -184,19 +196,23 @@
     <div class="item"><span class="item-nombre">Té o infusión</span><span class="item-precio">2,60 €</span></div>
     <div class="item"><span class="item-nombre">Agua con gas Vichy</span><span class="item-precio">2,50 €</span></div>
     <div class="item"><span class="item-nombre">Tinto de Verano</span><span class="item-precio">2,50 €</span></div>
-    <div class="item"><span class="item-nombre">Chai tea latte</span><span class="item-precio">3,50 €</span></div>
-    <div class="item"><span class="item-nombre">Matcha latte</span><span class="item-precio">3,50 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Chai tea latte</span><span class="item-desc">té especiado, leche</span></div><span class="item-precio">3,50 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Matcha latte</span><span class="item-desc">té verde molido con leche</span></div><span class="item-precio">3,50 €</span></div>
     <div class="item"><span class="item-nombre">Zumo de naranja</span><span class="item-precio">3,50 €</span></div>
+    <div class="item"><span class="item-nombre">Mahou clásica</span><span class="item-precio">1,80 €</span></div>
+    <div class="item"><span class="item-nombre">Mahou especial</span><span class="item-precio">2,00 €</span></div>
+    <div class="item"><span class="item-nombre">Mahou 0,0 Tostada</span><span class="item-precio">2,30 €</span></div>
   </section>
 
   <section class="categoria" id="smoothies">
     <h2>Smoothies</h2>
-    <div class="item"><span class="item-nombre">Colombian flaker</span><span class="item-precio">4,80 €</span></div>
-    <div class="item"><span class="item-nombre">Pichuli detox</span><span class="item-precio">4,80 €</span></div>
-    <div class="item"><span class="item-nombre">President digestive</span><span class="item-precio">4,80 €</span></div>
-    <div class="item"><span class="item-nombre">Spicy blanc</span><span class="item-precio">4,80 €</span></div>
-    <div class="item"><span class="item-nombre">Vitamin dragon</span><span class="item-precio">4,80 €</span></div>
-    <div class="item"><span class="item-nombre">Vititoro Power</span><span class="item-precio">4,80 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Colombian flaker</span><span class="item-desc">leche, espresso, avena, miel</span></div><span class="item-precio">4,80 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Pichuli detox</span><span class="item-desc">espinaca, piña, lima, manzana, jengibre</span></div><span class="item-precio">4,80 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">President digestive</span><span class="item-desc">arándanos, yogur, kiwi, plátano</span></div><span class="item-precio">4,80 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Spicy blanc</span><span class="item-desc">leche de coco, piña, naranja, avena, miel. Con un toque picante</span></div><span class="item-precio">4,80 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Vitamin dragon</span><span class="item-desc">naranja, mango, avena y miel</span></div><span class="item-precio">4,80 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Vititoro Power</span><span class="item-desc">cacao puro, leche, crema de 100% cacahuete, plátano</span></div><span class="item-precio">4,80 €</span></div>
+    <div class="item"><span class="item-nombre">Extra de proteína whey</span><span class="item-precio">2,00 €</span></div>
   </section>
 
   <section class="categoria" id="salados">
@@ -211,7 +227,7 @@
     <div class="item"><span class="item-nombre">Crema de queso, miel y nueces</span><span class="item-precio">4,50 €</span></div>
     <div class="item"><span class="item-nombre">Sándwich Mozarella y Tomate</span><span class="item-precio">6,90 €</span></div>
     <div class="item"><span class="item-nombre">Sándwich Pollo y Mostaza</span><span class="item-precio">6,90 €</span></div>
-    <div class="item"><span class="item-nombre">Desayuno early birds</span><span class="item-precio">7,50 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Desayuno early birds</span><span class="item-desc">tostada, café y zumo de naranja recién exprimido. Hasta las 9:30</span></div><span class="item-precio">7,50 €</span></div>
   </section>
 
   <section class="categoria" id="caprichos">
@@ -227,13 +243,6 @@
     <div class="item"><span class="item-nombre">Overnight oats con topping de 2 frutas</span><span class="item-precio">6,00 €</span></div>
     <div class="item"><span class="item-nombre">Yogur con topping de granola y 2 frutas</span><span class="item-precio">6,50 €</span></div>
     <div class="item"><span class="item-nombre">Açaí bowl</span><span class="item-precio">9,50 €</span></div>
-  </section>
-
-  <section class="categoria" id="cerveza">
-    <h2>Cerveza</h2>
-    <div class="item"><span class="item-nombre">Mahou clásica</span><span class="item-precio">1,80 €</span></div>
-    <div class="item"><span class="item-nombre">Mahou especial</span><span class="item-precio">2,00 €</span></div>
-    <div class="item"><span class="item-nombre">Mahou 0,0 Tostada</span><span class="item-precio">2,30 €</span></div>
   </section>
 
   <section class="categoria" id="fruta">
