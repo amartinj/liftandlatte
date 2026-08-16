@@ -15,11 +15,8 @@
 
 @font-face {
     font-family: 'Conv_american_typewriter';
-    src: url('american_typewriter.eot');
-    src: url('american_typewriter.eot') format('eot'), 
-         url('american_typewriter.woff') format('woff'), 
-         url('american_typewriter.ttf') format('truetype'), 
-         url('american_typewriter.svg') format('svg');
+    src: url('american_typewriter.woff') format('woff'),
+         url('american_typewriter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -31,8 +28,8 @@
 }
 
 html, body {
-    background-color: #F0F0F0;
-    color: #410909;
+    background-color: var(--fondo);
+    color: var(--principal);
     font-family: "Conv_american_typewriter", serif;
     height: 100%;
     width: 100%;
@@ -40,15 +37,9 @@ html, body {
 }
 
 html.with-scroll, body.with-scroll {
-    background-color: #F0F0F0;
-    color: #410909;
-    font-family: "Conv_american_typewriter", serif;
-    height: 100%;
-    width: 100%;
     overflow: scroll;
     display: block;
 }
-
 
 body {
     display: flex;
@@ -65,7 +56,7 @@ p {
 
 span.stamp {
     font-size: 3rem;
-    background-color: #D9D9D9;
+    background-color: var(--neutro2);
     width: 3.5rem;
     height: 3.5rem;
     display: block;
@@ -76,12 +67,12 @@ span.stamp {
 nav {
     text-align: center;
     font-size: 1.2rem;
-    color: #1B2845;
+    color: var(--contraste1);
     margin: 20px 5px;
 }
 
 nav svg {
-    fill: #A63D40;
+    fill: var(--destacado);
     margin-bottom: -0.3rem;
     width: 1.3rem;
     height: 1.3rem;
@@ -89,7 +80,7 @@ nav svg {
 
 nav a {
     text-decoration: none;
-    color: #A63D40;
+    color: var(--destacado);
     margin: 0 10px;
 }
 
@@ -105,7 +96,7 @@ nav a {
 .email p {
     display: block;
     text-align: center;
-    color: #7FB3D5;
+    color: var(--contraste2);
 }
 
 .content iframe {
@@ -131,7 +122,7 @@ h2 {
 footer {
     font-size: 0.8rem;
     text-align: center;
-    color: #1B2845;
+    color: var(--contraste1);
     margin: 20px 20px;
 }
 
