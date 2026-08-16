@@ -137,6 +137,53 @@
     white-space:nowrap;
   }
 
+  .item-extra{
+    color:var(--principal);
+    font-size:0.78rem;
+    white-space:nowrap;
+    font-weight:normal;
+    opacity:0.75;
+  }
+
+  .especiales-tabla{
+    width:100%;
+    border-collapse:collapse;
+  }
+
+  .especiales-tabla thead th{
+    text-align:left;
+    color:var(--secundario);
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-weight:bold;
+    padding:0 0 8px;
+    white-space:nowrap;
+  }
+
+  .especiales-tabla thead th:not(:first-child){
+    padding-left:10px;
+  }
+
+  .especiales-tabla td{
+    vertical-align:top;
+    padding:10px 0;
+    border-bottom:1px dotted var(--neutro2);
+  }
+
+  .especiales-tabla tr:last-child td{
+    border-bottom:none;
+  }
+
+  .especiales-tabla td.precio-col{
+    text-align:left;
+    color:var(--secundario);
+    font-weight:bold;
+    font-size:0.95rem;
+    white-space:nowrap;
+    padding-left:10px;
+  }
+
   footer{
     text-align:center;
     padding:26px 16px;
@@ -160,6 +207,7 @@
 
 <nav>
   <a href="#cafe">Café</a>
+  <a href="#especiales">Cafés especiales</a>
   <a href="#bebidas">Otras bebidas</a>
   <a href="#smoothies">Smoothies</a>
   <a href="#salados">Salados</a>
@@ -176,7 +224,7 @@
     <div class="item"><span class="item-nombre">Espresso doble</span><span class="item-precio">1,90 €</span></div>
     <div class="item"><span class="item-nombre">Cortado</span><span class="item-precio">2,00 €</span></div>
     <div class="item"><div class="item-info"><span class="item-nombre">Aeroccano</span><span class="item-desc">doble espresso, agua fría texturizada</span></div><span class="item-precio">2,30 €</span></div>
-    <div class="item"><div class="item-info"><span class="item-nombre">latte</span><span class="item-desc">espresso, leche</span></div><span class="item-precio">2,50 €</span></div>
+    <div class="item"><div class="item-info"><span class="item-nombre">Latte</span><span class="item-desc">espresso, leche</span></div><span class="item-precio">2,50 €</span></div>
     <div class="item"><div class="item-info"><span class="item-nombre">Flat white</span><span class="item-desc">doble espresso, leche</span></div><span class="item-precio">2,90 €</span></div>
     <div class="item"><div class="item-info"><span class="item-nombre">Capuccino</span><span class="item-desc">doble espresso, leche, espuma</span></div><span class="item-precio">2,90 €</span></div>
     <div class="item"><div class="item-info"><span class="item-nombre">Affogato</span><span class="item-desc">doble espresso, helado de vainilla</span></div><span class="item-precio">2,90 €</span></div>
@@ -186,7 +234,78 @@
     <div class="item"><div class="item-info"><span class="item-nombre">Manual brew</span><span class="item-desc">filtrado al momento. Pregunta por nuestros cafés de temporada</span></div><span class="item-precio">6,00 €</span></div>
   </section>
 
-  <section class="categoria" id="bebidas">
+  <section class="categoria" id="especiales">
+    <h2>Cafés especiales</h2>
+    <div style="overflow-x:auto;">
+    <table class="especiales-tabla">
+      <thead>
+        <tr>
+          <th>Café</th>
+          <th>Filtro</th>
+          <th>Espresso</th>
+          <th>Retail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="item-info">
+              <span class="item-nombre">Kiambu Nyeri — Mont Kenya, Kenia</span>
+              <span class="item-desc">K7, lavado keniata. Perfil dulce, suave y equilibrado, con notas a caramelo, limón y chocolate con leche, y un fondo sutil a malta. Recomendado para espresso y moka.</span>
+            </div>
+          </td>
+          <td class="precio-col">+1,00 €</td>
+          <td class="precio-col">+0,50 €</td>
+          <td class="precio-col">14,00 €</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-info">
+              <span class="item-nombre">Decaf Nasa Wesx — Tolima, Colombia</span>
+              <span class="item-desc">Proceso natural, Sugar Cane. Perfil dulce y frutal, con notas a frutos del bosque, caramelo y galleta, y un fondo anisado. Descafeinado de forma natural, sin químicos.</span>
+            </div>
+          </td>
+          <td class="precio-col">+0,00 €</td>
+          <td class="precio-col">+0,00 €</td>
+          <td class="precio-col">14,00 €</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-info">
+              <span class="item-nombre">Dukale Bombe — Sidama, Etiopía</span>
+              <span class="item-desc">Heirloom, proceso natural. Muy afrutado y jugoso, con acidez viva y notas a mango, mora y limonada, con un final limpio.</span>
+            </div>
+          </td>
+          <td class="precio-col">+1,50 €</td>
+          <td class="precio-col">+1,00 €</td>
+          <td class="precio-col">16,00 €</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-info">
+              <span class="item-nombre">Varios Productores — Nicaragua, Diplito</span>
+              <span class="item-desc">Geisha, lavado, 1450 mts. Chocolate con leche, floral y especiado, con acidez media/baja.</span>
+            </div>
+          </td>
+          <td class="precio-col">+1,00 €</td>
+          <td class="precio-col">+0,50 €</td>
+          <td class="precio-col">14,00 €</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="item-info">
+              <span class="item-nombre">Vinicius Marqués Leal — Cerrado da Mineiro, Brasil</span>
+              <span class="item-desc">Catuai Amarillo, Peachberry, proceso natural, 1200 mts. Notas a chocolate y fruta roja.</span>
+            </div>
+          </td>
+          <td class="precio-col">+1,00 €</td>
+          <td class="precio-col">+0,50 €</td>
+          <td class="precio-col">14,00 €</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
     <h2>Otras bebidas</h2>
     <div class="item"><span class="item-nombre">Vaso de leche</span><span class="item-precio">1,80 €</span></div>
     <div class="item"><span class="item-nombre">Agua mineral 1.5L</span><span class="item-precio">1,50 €</span></div>
