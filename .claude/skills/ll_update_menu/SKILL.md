@@ -65,9 +65,15 @@ Typical columns: product name, price, category, and optionally a description col
 
 3. **Open the project's `carta.html`** (repo root) — this is what you'll edit.
 
-4. **Identify the `id="especiales"` section in `carta.html` and do NOT touch it.** This is this skill's most important rule: any `<section class="categoria" id="especiales">...</section>` must remain exactly the same, byte for byte, in the output file. Also don't touch the `<a href="#especiales">Cafés especiales</a>` link in `<nav class="categorias-carta">`.
+4. **Diff the Excel against the current HTML item by item before concluding anything.** Never assume "nothing changed" from a quick skim — that has caused real misses (e.g. a new smoothie added between two existing ones went unnoticed). Build an explicit list of every product currently in the non-especiales sections of `carta.html` (name, description, price, category) and compare it field by field against every row read from the Excel:
+   - For each Excel row, check whether that exact name exists in the HTML, and if so, whether its description, price, and category all match.
+   - For each HTML item, check whether it still exists in the Excel (a missing one means it should be removed).
+   - Do this as a systematic pass over the full list (e.g. print both lists and compare, or check off each Excel row against the HTML one at a time) — not by eyeballing the rendered sections and pattern-matching on "looks the same".
+   - Only after this explicit comparison, conclude which items are new, removed, moved, or changed (and which are unchanged).
 
-5. **Recompute the remaining sections** (Café, Otras bebidas, Smoothies, Salados, Caprichos, Bowls, Fruta, or whichever apply according to the "categoría" column in the Excel) from the new list:
+5. **Identify the `id="especiales"` section in `carta.html` and do NOT touch it.** This is this skill's most important rule: any `<section class="categoria" id="especiales">...</section>` must remain exactly the same, byte for byte, in the output file. Also don't touch the `<a href="#especiales">Cafés especiales</a>` link in `<nav class="categorias-carta">`.
+
+6. **Recompute the remaining sections** (Café, Otras bebidas, Smoothies, Salados, Caprichos, Bowls, Fruta, or whichever apply according to the "categoría" column in the Excel) from the new list:
    - Group products by category, in the order categories appear in the Excel (or the order already used in the HTML if it doesn't change).
    - Each product is a `<div class="item">`. If it has a description, wrap name + description in `<div class="item-info">` with `<span class="item-nombre">` and `<span class="item-desc">`; if it has no description, use `<span class="item-nombre">` directly as a sibling of `<span class="item-precio">`.
    - Prices in `X,XX €` format (decimal comma, € symbol with a space before it).
@@ -75,19 +81,21 @@ Typical columns: product name, price, category, and optionally a description col
    - Respect the existing CSS classes (`.item`, `.item-info`, `.item-nombre`, `.item-desc`, `.item-precio`, etc.) — don't invent new ones. Since styles live in `styles.css` and not in `carta.html`, 99% of the time you won't need to touch CSS. If a genuinely new case requires it (e.g. a product without a numeric price, like `.item-extra`), add the rule to `styles.css` under the `.carta-page` prefix, never as a `<style>` inside `carta.html`.
    - **Every `<section class="categoria">` must always have its opening tag `<section class="categoria" id="...">` followed by its `<h2>`.** Check this explicitly: a known error in manual edits was losing a section's opening tag, leaving its `<h2>` dangling inside the previous section. Before delivering, confirm the number of opening `<section` tags matches the number of closing `</section>` tags and the number of entries in `<nav class="categorias-carta">`.
 
-6. **Apply changes with the edit tool** section by section instead of rewriting the whole file, unless the user explicitly asks for a full rebuild. This minimizes the risk of accidentally breaking the special-coffees section.
+7. **Apply changes with the edit tool** section by section instead of rewriting the whole file, unless the user explicitly asks for a full rebuild. This minimizes the risk of accidentally breaking the special-coffees section.
 
-7. **Verify before delivering:**
+8. **Verify before delivering:**
+   - That the item-by-item diff from step 4 is fully reflected: every new/changed/removed item identified there is actually present/updated/removed in the edited HTML.
    - That the `id="especiales"` section is still present and unchanged.
    - That every `<div class="item">` is properly closed and prices have the correct format.
    - That the `<nav class="categorias-carta">` links point to `id`s that exist in the document.
-   - That every `<section class="categoria" id="...">` has its opening and closing tags correctly paired (see point 5).
+   - That every `<section class="categoria" id="...">` has its opening and closing tags correctly paired (see point 6).
    - That no inline `<style>` was added and `<div data-include="nav.html">` / `<div data-include="footer.html">` weren't touched.
 
-8. **Summarize for the user** what changed: products added, removed, moved between categories, or updated prices. Be concise — a short list is enough. Explicitly mention that the Special Coffees section wasn't touched.
+9. **Summarize for the user** what changed: products added, removed, moved between categories, or updated prices. Be concise — a short list is enough. Explicitly mention that the Special Coffees section wasn't touched.
 
 ## Common mistakes to avoid
 
+- Don't conclude "nothing changed" from skimming the Excel and the rendered HTML side by side — do the explicit item-by-item diff (step 4). A new item inserted between two existing, unchanged items is easy to miss on a skim.
 - Don't rename or reorder existing section `id`s unless the Excel explicitly requires it.
 - Don't duplicate products that already exist in another category.
 - Don't touch the special-coffees table (`.especiales-tabla`, `.item-extra`) — that's `ll_update_specialcoffees`'s job.
